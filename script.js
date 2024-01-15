@@ -9,8 +9,6 @@ btn.addEventListener("click", (e) => {
   count++;
   if(count > 0){
     document.querySelector(".display").style.color = "green";
-  }else if(count == 0){
-    document.querySelector(".display").style.color = "black";
   }
 //   console.log(count);
   document.querySelector(".display").innerText = count;
@@ -20,8 +18,6 @@ sub.addEventListener("click", () => {
   count--;
   if(count < 0){
     document.querySelector(".display").style.color = "red";
-  }else if(count == 0){
-    document.querySelector(".display").style.color = "black";
   }
   document.querySelector(".display").innerText = count;
 });
@@ -29,4 +25,7 @@ sub.addEventListener("click", () => {
 reset.addEventListener("click", () => {
   count = 0;
   document.querySelector(".display").innerText = count;
+  if(count == 0){
+    document.querySelector(".display").style.color = "grey";
+  }
 });
